@@ -10,18 +10,13 @@ const BookList=() => {
     </section>);
 }
 const Book = () => {
+    const title = 'Martin J. Sherwin';
     return <article className='book'>
-        <Image />
-        <Title />
-        <Author/>
+        <img src="./images/book-1.jpg" alt='American Prometheus: The Triumph and Tragedy' />
+        <h2>American Prometheus: The Triumph and Tragedy</h2>
+        <h4>{ title }</h4>
     </article>
 }
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/81yfsIOijJL._AC_UL600_SR600,400_.jpg" alt='American Prometheus: The Triumph and Tragedy'/>
-const Title = () => <h2>American Prometheus: The Triumph and Tragedy</h2>
-const Author = () => {
-    return <h2> Martin J. Sherwin </h2>;
-}
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList/>);
