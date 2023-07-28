@@ -7,21 +7,19 @@ const author = 'Martin J. Sherwin';
 const img = './images/book-1.jpg';
 const BookList=() => {
     return (<section className='booklist'>
-        <Book />
-        <Book job="dveloper" />
-        <Book title="random" number={ 22 } />
+        <Book title={ title } author={author} img={img} />
+        <Book title={ title } author={author} img={img} />
+        <Book title={ title } author={author} img={img} />
 
     </section>);
 }
 const Book = (props) => {
     console.log(props)
     return <article className='book'>
-        <img src={img} alt={title} />
-        <h2>{ title }</h2>
-        <h4>{author}</h4>
-        <p>{ props.job}</p>
-        <p>{props.title}</p>
-        <p>{ props.number}</p>
+        <img src={props.img} alt={props.title} />
+        <h2>{ props.title }</h2>
+        <h4>{props.author}</h4>
+
     </article>
 }
 
