@@ -2,14 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-const title = 'American Prometheus: The Triumph and Tragedy';
-const author = 'Martin J. Sherwin';
-const img = './images/book-1.jpg';
+const firstBook = {
+    author: 'Martin J. Sherwin',
+    title: 'American Prometheus: The Triumph and Tragedy',
+    img: './images/book-1.jpg',
+}
+
+const secondBook = {
+    author: 'Hanya Yanagihara',
+    title: 'A Little Life Paperback',
+    img: './images/book-2.jpg',
+}
+
 const BookList=() => {
     return (<section className='booklist'>
-        <Book title={ title } author={author} img={img} />
-        <Book title={ title } author={author} img={img} />
-        <Book title={ title } author={author} img={img} />
+        <Book title={ firstBook.title } author={firstBook.author} img={firstBook.img} />
+        <Book title={ secondBook.title } author={secondBook.author} img={secondBook.img} />
+        
 
     </section>);
 }
